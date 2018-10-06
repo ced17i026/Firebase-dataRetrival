@@ -1,0 +1,25 @@
+{
+  "name": "internproject",
+  "version": "1.0.0",
+  "description": "Project for Internship",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sivsnkr/InternProject.git"
+  },
+  "author": "Shiv Shankar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sivsnkr/InternProject/issues"
+  },
+  "homepage": "https://github.com/sivsnkr/InternProject#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.3.1"
+  }
+}
