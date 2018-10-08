@@ -7,4 +7,7 @@
     <%friends.forEach(function(el){%>
         <li><%=el%></li>
     <%})%>
-</body>
+    <form action="/hello" method="POST">
+        <button>Submit</button>
+    </form>
+<% include partials/footer%>
