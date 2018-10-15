@@ -16,33 +16,16 @@ var config = {
     projectId: "munshik3-46360",
     storageBucket: "munshik3-46360.appspot.com",
     messagingSenderId: "684242987795"
-  };
-  firebase.initializeApp(config);
-  //accessing the firebase ends here
+};
+var initialization = firebase.initializeApp(config);
+//accessing the firebase ends here
+//accessing the firestore
+const firestore = firebase.firestore();
+var data = firestore.collection("barcode_inventory");
 
-  //all the routes start here
-
-//code for getting the json file of firebase
-request("https://www.gstatic.com/firebasejs/5.5.3/firebase.js", function(err,response, body){
-    if(err)
-    {
-        console.log(err);
-    }
-    else
-    {
-        if(response.statusCode === 200)
-        {
-            console.log(body);
-        }
-    }
-})
-app.get("/", function(req,res){
-    var friends = ["Shiv Shankar", "Krishna Kumar Sutar", "Aviral Rai", "Bazif Rasool"];
-    res.render("home.ejs", {friends: friends});
-})
-
-app.get("/:hell", function(req,res){
-    res.send("Hello Shiv");
+data.get().then(function(doc){
+    var userData = doc._snapshot.docChanges[0].doc.data;
+    console.log(userData);
 })
 
 
