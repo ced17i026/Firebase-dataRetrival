@@ -45,9 +45,8 @@ barcode_inventory_data.get().then(function(doc){
                 barcode_price: userData.internalValue.root.right.left.value.internalValue,
                 timestamp: userData.internalValue.root.right.value.internalValue
             }
-            console.log(data);
             dataTable.create(data,function(data){
-                console.log(data);
+                //data is inserted
             })
         }
     })
